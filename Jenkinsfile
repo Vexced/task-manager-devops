@@ -43,6 +43,10 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 script {
+                        // Verifica el usuario (opcional, para debug)
+                    sh 'whoami'
+                    sh 'id'
+
                     sh "kubectl apply -f k8s/configmap.yaml || true"
                     sh "kubectl apply -f k8s/deployment.yaml"
                     sh "kubectl apply -f k8s/service.yaml"
