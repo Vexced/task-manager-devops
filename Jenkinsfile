@@ -40,6 +40,12 @@ pipeline {
                 // }
             }
         }
+         stage('Kubectl example') {
+            steps {
+                sh 'kubectl get pods'
+            }
+        }
+
         stage('Deploy to Kubernetes') {
             steps {
                 script {
