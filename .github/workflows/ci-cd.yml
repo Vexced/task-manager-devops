@@ -27,7 +27,7 @@ jobs:
         with:
           context: ./api
           push: true
-          tags: vexced/task-api:latest
+          tags: vexced17/task-api:latest
 
       - name: Run tests (optional)
         run: |
