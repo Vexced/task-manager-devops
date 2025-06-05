@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Vexced/task-manager-devops.git'  // Cambia por tu repo
+                git 'https://github.com/tu_usuario/tu_repositorio.git'  // Cambia por tu repo
             }
         }
 
