@@ -27,7 +27,7 @@ jobs:
         with:
           context: ./api
           push: true
-          tags: yourdockerhubusername/task-api:latest
+          tags: vexced/task-api:latest
 
       - name: Run tests (optional)
         run: |
