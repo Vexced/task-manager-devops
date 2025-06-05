@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-//prueba de githubaction
+//prueba de githubaction prueba 2
 
 const express = require('express');
 const cors = require('cors');
