@@ -9,7 +9,7 @@ pipeline {
     stages {
        stage('Checkout') {
     steps {
-        git credentialsId: 'github-token', url: 'https://github.com/Vexced/task-manager-devops.git'
+        git credentialsId: 'github-token', git branch: 'main' url: 'https://github.com/Vexced/task-manager-devops.git'
     }
 }
 
