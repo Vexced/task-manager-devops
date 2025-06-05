@@ -7,11 +7,12 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/tu_usuario/tu_repositorio.git'  // Cambia por tu repo
-            }
-        }
+       stage('Checkout') {
+    steps {
+        git credentialsId: 'github-token', url: 'https://github.com/Vexced/task-manager-devops.git'
+    }
+}
+
 
         stage('Build Docker Image') {
             steps {
