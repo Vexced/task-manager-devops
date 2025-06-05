@@ -4,6 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = 'task-api'
         IMAGE_TAG = '1.0'
+        KUBECONFIG = '/var/lib/jenkins/.kube/config'
     }
 
     stages {
