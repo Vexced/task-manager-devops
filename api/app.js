@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
   res.send('API funcionando correctamente');
 });
 
-app.post('/github-webhook', (req, res) => {
+app.post('/github-webhook/', (req, res) => {
   console.log('Payload recibido:', req.body);
   res.status(200).send('Webhook recibido correctamente');
 });
