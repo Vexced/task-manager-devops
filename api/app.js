@@ -15,7 +15,15 @@ app.use(cors({
   credentials: true
 }));
 
-app.use(express.json());
+
+app.use(express.json()); // importante para parsear JSON en el body
+
+// Aquí agregar la ruta para el webhook
+app.post('/github-webhook', (req, res) => {
+  console.log('Webhook recibido:', req.body);
+  // Aquí puedes hacer lo que quieras con la data del webhook
+  res.status(200).send('Webhook recibido');
+});
 
 app.use('/auth', authRoutes);
 app.use('/tasks', taskRoutes);
@@ -24,10 +32,7 @@ app.get('/', (req, res) => {
   res.send('API funcionando correctamente');
 });
 
-app.post('/github-webhook/', (req, res) => {
-  console.log('Payload recibido:', req.body);
-  res.status(200).send('Webhook recibido correctamente');
-});
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
